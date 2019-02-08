@@ -23,6 +23,13 @@ where the Ogre libraries will be compiled. This way, the Ogre source
 dir stays clean, and you can have multiple build directories all
 working from the same Ogre source.
 
+Example:
+```
+$ git clone https://github.com/greenermoose/ogre.git
+$ cd ogre
+$ mkdir build_macosx && cd build_macosx
+```
+
 Getting dependencies
 --------------------
 
@@ -96,7 +103,7 @@ Go to your chosen build directory. CMake has generated a build system for
 you which you will now use to build Ogre. If you are using Visual Studio,
 you should find the file OGRE.sln. Open it and compile the target
 *BUILD_ALL*. Similarly you will find an Xcode project to build Ogre
-on MacOS. 
+on MacOS.
 
 If you rather want to trigger the build form a console, then cd to your build directory and call the appropriate make program as
 
@@ -169,7 +176,7 @@ You can use https://bitbucket.org/eugene_gff/ogre-dependencies-winrt -
 has VS2012 and VS2013 projects for Win32, WinRT (can be reused for WinPhone)
 Compile dependencies for all configurations that you plan to use before
 running CMake. Dependencies for Win32 and for WinRT must be located in
-separate folders, Win32 version can be built from OgreDependencies.VS201x.sln, 
+separate folders, Win32 version can be built from OgreDependencies.VS201x.sln,
 WinRT from OgreDependencies.VS201x.WinRT.sln
 
 Run CMake, specify source and binaries folders, than "Configure", select
