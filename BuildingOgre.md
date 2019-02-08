@@ -100,29 +100,32 @@ From the command line:
 
 ```
 $ cd build_xcode
+$ CMAKE_OSX_ARCHITECTURES=x86_64
 $ cmake -GXcode ..
 ```
 
 Building
 --------
 
-Go to your chosen build directory. CMake has generated a build system for
-you which you will now use to build Ogre. If you are using Visual Studio,
-you should find the file OGRE.sln. Open it and compile the target
-*BUILD_ALL*. Similarly you will find an Xcode project to build Ogre
-on MacOS.
+First make sure CMake has generated a build system for you, which
+you will now use to build Ogre.
 
-If you rather want to trigger the build form a console, then cd to your build directory and call the appropriate make program as
+If you are using Visual Studio, find the file OGRE.sln. Open it and
+compile the target *BUILD_ALL*. Similarly you will find an Xcode
+project to build Ogre on MacOS.
 
-    cmake --build . --config release
+Or, to build from a command line:
 
-to start the build process.
+```
+$ cd build_xcode
+$ xcodebuild ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO -configuration RelWithDebInfo
+```
 
 If you have doxygen installed and CMake picked it up, then there will
 be an additional build target called *OgreDoc* which you can optionally build.
 This will freshly generate the API documentation for Ogre's classes from the header files. In Visual Studio, just select and build the target *OgreDoc*, on Linux type:
 
-     make OgreDoc
+    make OgreDoc
 
 
 Installing
@@ -131,13 +134,15 @@ Installing
 Once the build is complete, you can optionally have the build system
 copy the built libraries and headers to a clean location. We recommend
 you do this step as it will make it easier to use Ogre in your projects.
-In Visual Studio, just select and build the target *INSTALL*. For Makefile based generators, type:
+In Visual Studio, just select and build the target *INSTALL*. For Makefile
+based generators, type:
 
 
     make install  # (or sudo make install, if root privileges are required)
 
 
-On Linux Ogre will be installed to `/usr/local` by default. On Windows this will create the folder `sdk` inside your build directory and copy all the
+On Linux Ogre will be installed to `/usr/local` by default. On Windows this will
+create the folder `sdk` inside your build directory and copy all the
 required libraries there. You can change the install location by changing the variable `CMAKE_INSTALL_PREFIX` in CMake.
 
 
