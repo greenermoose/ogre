@@ -27,7 +27,7 @@ Example:
 ```
 $ git clone https://github.com/greenermoose/ogre.git
 $ cd ogre
-$ mkdir build_macosx && cd build_macosx
+$ mkdir build_xcode
 ```
 
 Getting dependencies
@@ -95,6 +95,13 @@ example unchecking any of the `OGRE_BUILD_XXX` options will disable that
 particular component from being built. Once you are satisfied, hit
 *Configure* again and then click on *Generate*. CMake will then create
 the build system for you.
+
+From the command line:
+
+```
+$ cd build_xcode
+$ cmake -GXcode ..
+```
 
 Building
 --------
