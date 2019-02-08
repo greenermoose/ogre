@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Only build for i386, halves the size
-ARCH="i386"
+# Only build for x86_64, halves the size
+ARCH="x86_64"
 SDKBUILDDIR=`pwd`
 
 # Clean up files from previous builds
@@ -9,7 +9,7 @@ echo Cleaning previous builds...
 if [ "$1" = "clean" ];then
 	rm -rf $SDKBUILDDIR/build
 fi
-rm -rf $SDKBUILDDIR/sdk_contents 
+rm -rf $SDKBUILDDIR/sdk_contents
 
 # Configure with CMake
 mkdir -p $SDKBUILDDIR/build
@@ -41,7 +41,7 @@ echo Building API docs...
 echo API generation done.
 
 # Invoke Xcode build
-xcodebuild -project OGRE.xcodeproj -target install -parallelizeTargets -configuration Release -sdk macosx ARCHS="i386 x86_64" MACOSX_DEPLOYMENT_TARGET=10.7 ONLY_ACTIVE_ARCH="NO"
+xcodebuild -project OGRE.xcodeproj -target install -parallelizeTargets -configuration Release -sdk macosx ARCHS="x86_64" MACOSX_DEPLOYMENT_TARGET=10.7 ONLY_ACTIVE_ARCH="NO"
 # Just release mode, debug is too big
 #xcodebuild -project OGRE.xcodeproj -target install -configuration Debug -sdk macosx10.4 ARCHS=i386 GCC_VERSION=4.0 MACOSX_DEPLOYMENT_TARGET=10.4
 

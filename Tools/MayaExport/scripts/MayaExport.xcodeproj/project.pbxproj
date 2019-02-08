@@ -233,7 +233,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
-					i386,
+					x86_64,
 				);
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -271,7 +271,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
-					i386,
+					x86_64,
 				);
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -307,7 +307,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
-					i386,
+					x86_64,
 				);
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
