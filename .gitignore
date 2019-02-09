@@ -12,6 +12,7 @@ cmake-build-*/
 /mingw/
 build_macosx
 build_xcode
+build_dependencies
 
 # Meta data of macOS's Finder.app
 .DS_Store

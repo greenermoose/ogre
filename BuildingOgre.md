@@ -33,11 +33,24 @@ $ mkdir build_xcode
 Getting dependencies
 --------------------
 
-By default ogre will build the essential dependencies automatically when you run cmake the first time. If you would rather use system wide libraries set `OGRE_BUILD_DEPENDENCIES=OFF`.
+By default ogre will build the essential dependencies automatically when you
+run cmake the first time. If you would rather use system wide libraries set
+`OGRE_BUILD_DEPENDENCIES=OFF`.
 
-Ogre will install the dependencies into the subfolder `Dependencies` in the build dir by default. You can configure it by setting `OGRE_DEPENDENCIES_DIR` in cmake. For instance to point to a common dependencies folder for all of your projects. Inside
-this directory you must have the subdirectories bin, lib and include
-where you place .dll, .lib and header files of the dependencies, respectively
+Ogre will install the dependencies into the subfolder `Dependencies` in the
+build dir by default.
+You can configure it by setting `OGRE_DEPENDENCIES_DIR` in cmake.
+Inside this directory you must have the subdirectories bin, lib and include
+where you place .dll, .lib and header files of the dependencies, respectively.
+
+For instance, to point to a common dependencies folder for all of your projects:
+
+```
+$ cd ogre
+$ mkdir build_dependencies
+$ cd build_dependencies
+$ mkdir bin lib include
+```
 
 On linux you additionally need the following system headers to build the GL RenderSystems (command for Ubuntu):
 
@@ -110,9 +123,10 @@ Building
 First make sure CMake has generated a build system for you, which
 you will now use to build Ogre.
 
-If you are using Visual Studio, find the file OGRE.sln. Open it and
-compile the target *BUILD_ALL*. Similarly you will find an Xcode
-project to build Ogre on MacOS.
+If you are using Visual Studio, find the file `OGRE.sln`. Open it and
+compile the target *BUILD_ALL*.
+
+If you are using Xcode, find the file  to build Ogre on MacOS.
 
 Or, to build from a command line:
 
