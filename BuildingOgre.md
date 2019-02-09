@@ -47,8 +47,8 @@ For instance, to point to a common dependencies folder for all of your projects:
 
 ```
 $ cd ogre
-$ mkdir build_dependencies
-$ cd build_dependencies
+$ mkdir Dependencies
+$ cd Dependencies
 $ mkdir bin lib include
 ```
 
@@ -126,7 +126,8 @@ you will now use to build Ogre.
 If you are using Visual Studio, find the file `OGRE.sln`. Open it and
 compile the target *BUILD_ALL*.
 
-If you are using Xcode, find the file  to build Ogre on MacOS.
+If you are using Xcode, look for `OGRE.xcodeproj` to build Ogre on MacOS.
+Open the project and build it.
 
 Or, to build from a command line:
 
